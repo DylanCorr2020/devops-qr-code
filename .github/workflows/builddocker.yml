@@ -15,4 +15,5 @@ jobs:
 
       - name: push image to docker hub
         run: |
+          docker login -u dcorr25 -p ${{ secrets.DOCKER_HUB_TOKEN }}
           docker push dcorr25/devops-qr-code-api:latest
