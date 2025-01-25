@@ -11,7 +11,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: build image
-        run: docker build ./api/ -t dcorr25/devops-qr-code-api:latest
+        run: |
+          docker build ./api/ -t dcorr25/devops-qr-code-api:latest
           docker build ./front-end-nextjs/ -t dcorr25/devops-qr-code-frontend:latest
 
       - name: push image to docker hub
